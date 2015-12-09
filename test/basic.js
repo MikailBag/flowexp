@@ -43,6 +43,12 @@ describe('tokenizer', function () {
         result = tok('just plain text');
         assert.equal(result.length, 'just plain text'.length);
     });
+    it('tokenizes []',function(){
+        result=tok('[foo]');
+        assert.equal(result.length,1);
+        assert.equal(result[0].type,'some');
+        assert.equal(result[0].val.length,3);
+    })
 
 
 });
