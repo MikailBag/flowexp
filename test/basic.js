@@ -1,10 +1,16 @@
+'use strict';
 require('should');
-var assert = require('assert');
+const assert = require('assert');
 var FlowExp = require('./..');
-describe('FlowExp', function () {
-    var fe, result;
+var util = require('util');
+var fe, result;
+describe.skip('engine', function () {
+
     it('creates fe', function () {
         fe = new FlowExp('%%foobar%%');
+        console.log(util.inspect(fe.constructor.prototype));
+        assert(fe, 'fe isn\`t obj');
+        assert(fe.exec);
     });
     it('should match', function () {
         result = fe.exec('foobar isn\'t barfoo')[0];
@@ -30,4 +36,13 @@ describe('FlowExp', function () {
             assert(result && result[0]);
         });
     });
+});
+describe('tokenizer', function () {
+    let tok = FlowExp.compile;
+    it('tokenizes plain text', function () {
+        result = tok('just plain text');
+        assert.equal(result.length, 'just plain text'.length);
+    });
+
+
 });

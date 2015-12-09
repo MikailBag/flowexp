@@ -4,7 +4,8 @@
   "description": "modelled after regexp module for parsing streams",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "debug": "node-debug tools/consumer.js"
   },
   "keywords": [
     "parse"
@@ -14,9 +15,8 @@
   "devDependencies": {
     "debug": "^2.2.0",
     "mocha": "^2.3.3",
+    "node-inspector": "^0.12.5",
     "should": "^7.1.1"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
