@@ -4,7 +4,7 @@ const assert = require('assert');
 var FlowExp = require('./..');
 var util = require('util');
 var fe, result;
-describe.skip('engine', function () {
+describe('engine', function () {
 
     it('creates fe', function () {
         fe = new FlowExp('%%foobar%%');
