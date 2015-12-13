@@ -4,8 +4,10 @@
   "description": "modelled after regexp module for parsing streams",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha",
-    "debug": "node-debug tools/consumer.js"
+    "test_mocha": "mocha",
+    "test_examples":"node examples/node/index.js",
+    "debug": "node-debug tools/consumer.js",
+    "test":"npm run test_examples && npm run test_mocha"
   },
   "keywords": [
     "parse"
