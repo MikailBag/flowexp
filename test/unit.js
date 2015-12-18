@@ -4,6 +4,7 @@ const assert = require('assert');
 var FlowExp = require('./..');
 var util = require('util');
 var fe, result;
+const ast=require('./ast');
 describe('engine', function () {
 
     it('creates fe', function () {
@@ -51,4 +52,13 @@ describe('tokenizer', function () {
     })
 
 
+});
+describe('matcher',function(){
+    let match;
+    it('matches with example ast',function(){
+        fe=new FlowExp();
+        fe.ast=ast;
+        match=fe.exec('foobarbarbar');
+        assert.equal(match[0],true);
+    })
 });

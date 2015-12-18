@@ -1,0 +1,20 @@
+{
+  "type":"complex",
+  "value":[
+    {
+      "type":"equals",
+      "value":"foo"
+    },
+    {
+      "type":"quantify",
+      "quantify":{
+        "min":3,
+        "max":3
+      },
+      "value":{
+        "type":"equals",
+        "value":"bar"
+      }
+    }
+  ]
+}
