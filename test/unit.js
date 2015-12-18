@@ -56,7 +56,7 @@ describe('tokenizer', function () {
 describe('matcher',function(){
     let match;
     it('matches with example ast',function(){
-        fe=new FlowExp();
+        fe=new FlowExp(ast);
         fe.ast=ast;
         match=fe.exec('foobarbarbar');
         assert.equal(match[0],true);
